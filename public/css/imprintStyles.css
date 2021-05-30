@@ -1,0 +1,20 @@
+@media only screen {
+    .impressum .content {
+        margin: 3% 10vw;
+    }
+
+    .impressum h1 {
+        color: red;
+        font-size: 45px;
+    }
+
+    .impressum h2 {
+        color: #1779ba;
+        font-size: 38px;
+    }
+
+    .impressum h3 {
+        color: red;
+        font-size: 30px;
+    } 
+}

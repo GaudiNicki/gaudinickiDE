@@ -1,0 +1,73 @@
+@media only screen {
+    .youtube .catcher_01 {
+        background: url("/img/video02.jpeg") no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .youtube .catcher_01 .overlay {
+        position: relative;
+        background: rgba(0,0,0,0.35);
+        width: 100%;
+        height: 100%;
+    }
+
+    .youtube .catcher_01 .overlay h1, .youtube .catcher_02 h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 70px;
+        color: #FFF;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .youtube .catcher_02 {
+        background: url("/img/video01.jpeg") no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+    }
+
+    .youtube .text_01 {
+        padding: 2vh 5%;
+    }
+
+    .youtube .text_02 {
+        padding: 2vh 5%;
+    }
+
+    .youtube .text_02 .embed-container {
+        position: relative;
+        padding-bottom: 56.25%; /* ratio 16x9 */
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        margin: 0 0 7vh 0;
+    }
+
+    .youtube .text_02 .embed-container:last-child {
+        margin: 0;
+    }
+
+    .youtube .text_02 .embed-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .youtube .text_02 h2 {
+        color: #1779ba;
+    }
+}
+
+@media only screen and (min-width: 766px) {
+    .youtube .content .text_01, .youtube .content .text_02 {
+        padding: 10vh 10%;
+    }
+}

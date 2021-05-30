@@ -1,0 +1,175 @@
+@media only screen {
+    .coding .catcher_01 {
+        background: url("/img/code02.jpeg") no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .coding .catcher_02 {
+        background: url("/img/code03.jpeg") center;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .coding .catcher_03 {
+        background: url("/img/code01.jpg");
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .coding .content .catcher_01 h1 {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 55px;
+        color: #FFF;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .coding .content .catcher_03 h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 55px;
+        color: #FFF;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .coding .content .catcher_01 h2 {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        display: none;
+        color: darkgray;
+    }
+
+    .coding .content .catcher_01 .overlay, .coding .content .catcher_03 .overlay  {
+        position: relative;
+        background: rgba(0,0,0,0.35);
+        width: 100%;
+        height: 100%;
+    }
+
+    .coding .content .text_01, .coding .content .text_03 {
+        padding: 2vh 5%;
+    }
+
+    .coding .content .detail-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .coding .content .detail-wrapper .left {
+        display: none;
+        position: relative;
+    }
+
+    .coding .content .detail-wrapper .left .image-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    .coding .content .detail-wrapper .right {
+        width: 100%;
+        padding: 2vh 5%;
+    }
+
+    .coding .content .text_01 h1,.coding .content .text_02 h1, .coding .content .text_03 h1 {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 3%;
+    }
+
+    .coding .game_developing_wrapper .single_game {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2vh 5%;
+        margin: 2vh 0;
+        background: rgba(0,0,0,0.05);
+    }
+
+    .coding .game_developing_wrapper .single_game .left_text, .coding .game_developing_wrapper .single_game .left_img {
+        width: 100%;
+    }
+
+    .coding .game_developing_wrapper .single_game .right_text, .coding .game_developing_wrapper .single_game .right_img {
+        width: 100%;
+    }
+
+    .coding .game_developing_wrapper .single_game img {
+        display: none;
+    }
+
+    .coding .game_developing_wrapper .single_game .text_wrapper h3 {
+        font-family: "Mali", serif;
+        font-size: 45px;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .coding .content .catcher_01 h2 {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 766px) {
+    .coding .content .text_01, .coding .content .text_03 {
+        padding: 10vh 10%;
+    }
+
+    .coding .content .text_02 .right {
+        padding: 10vh 10%;
+        width: 60%;
+    }
+
+    .coding .content .text_02 .left {
+        display: block;
+        width: 40%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .coding .content .text_01 h1,.coding .content .text_02 h1, .coding .content .text_03 h1 {
+        text-align: left;
+        font-size: 48px;
+        margin-bottom: 2%;
+    }
+}
+
+@media only screen and (min-width: 1215px) {
+    .coding .content .catcher_01 h1, .coding .content .catcher_02 h1, .coding .content .catcher_03 h1 {
+        top: 50%;
+        left: 50%;
+        font-size: 60px;
+    }
+
+    .coding .content .catcher_01 h2 {
+        top: 65%;
+        left: 50%;
+        font-size: 36px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .coding .game_developing_wrapper .single_game {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5% 3%;
+        margin: 3vh 0;
+    }
+}

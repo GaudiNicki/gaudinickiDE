@@ -1,0 +1,55 @@
+@media only screen {
+    .home .content-wrapper {
+        height: 100vh;
+        position: relative;
+        text-align: center;
+    }
+
+    .home .content-wrapper .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+    }
+
+    .home .content h1 {
+        margin: 0;
+        color: white;
+        font-size: 40px;
+    }
+
+    .home .content a {
+        display: block;
+        margin: 10% 0 0 0;
+        font-size: 16px;
+        color: #FFFFFF;
+        padding: 13px 35px;
+        background: #1c6ced;
+        border: 2px solid #1c6ced;
+        box-sizing: border-box;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all .5s;
+    }
+
+    .home .content a:hover {
+        background: transparent;
+        color: #1c6ced;
+    }
+
+    .home .content a:focus {
+        outline: 0;
+    }
+
+}
+
+@media only screen and (max-width: 485px) {
+    .home .content h1 {
+        font-size: 60px;
+    }
+
+    .home .content a {
+        font-size: 20px;
+    }
+}
