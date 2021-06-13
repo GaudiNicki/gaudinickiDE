@@ -3,23 +3,23 @@ const index = (req, res) => {
 };
 
 const me = (req, res) => {
-    res.render('me');
+    res.render('me', { title: 'Me' });
 };
 
 const coding = (req, res) => {
-    res.render('coding');
+    res.render('coding', { title: 'Coding' });
 };
 
 const youtube = (req, res) => {
-    res.render('youtube');
+    res.render('youtube', { title: 'YouTube' });
 };
 
 const imprint = (req, res) => {
-    res.render('imprint');
+    res.render('imprint', { title: 'Impressum' });
 };
 
 const privacy = (req, res) => {
-    res.render('privacy');
+    res.render('privacy', { title: 'Datenschutz' });
 };
 
 module.exports = {
