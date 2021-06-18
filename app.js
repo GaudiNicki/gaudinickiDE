@@ -1,7 +1,17 @@
 const fs = require('fs');
+const http = require('http');
 const https = require('https');
 const express = require('express');
 const routes = require('./routes/routes');
+
+// create http server listening on port 80
+const httpApp = express();
+const httpServer = http.createServer(httpApp);
+
+httpsServer.listen(80, () => console.log('listening for http requests on port 80'));
+
+// redirect all http requests to https
+httpApp.get('*', (req, res) => res.redirect('https:' + req.headers.host + req.url));
 
 // create https credentials
 const credentials = {
@@ -9,7 +19,7 @@ const credentials = {
     cert: fs.readFileSync('/etc/letsencrypt/live/gaudinicki.de/fullchain.pem')
 }
 
-// https express app
+// create httpsServer listening on port 443
 const app = express();
 const httpsServer = https.createServer(credentials, app);
 
@@ -17,13 +27,6 @@ httpsServer.listen(443, () => console.log('listening for https requests on port 
 
 // enable reverse proxy support
 app.enable('trust proxy');
-
-// redirect http to https
-app.use((req, res, next) => {
-    console.log(req.headers.host);
-    console.log(req.url);
-    req.secure ? next() : res.redirect('https://' + req.headers.host + req.url);
-});
 
 // register view engine
 app.set('view engine', 'ejs');
