@@ -1,21 +1,42 @@
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
 const express = require('express');
 const routes = require('./routes/routes');
 
-// express app
-const app = express();
+// http express app
+const httpApp = express();
+const httpServer = http.createServer(httpApp);
 
-// listen for requests
-app.listen(3000, () => console.log('listening for requests on port 3000'));
+// listen for http requests on port 80
+httpServer.listen(80, () => console.log('listening for http requests on port 80'));
+
+// redirect http to https
+http.get('*', function(req, res) {  
+    res.redirect('https://' + req.headers.host + req.url);
+})
+
+// create https credentials
+const credentials = {
+    key: fs.readFileSync('/etc/letsencrypt/live/gaudinicki.de/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/gaudinicki.de/fullchain.pem')
+}
+
+// https express app
+const httpsApp = express();
+const httpsServer = https.createServer(credentials, httpsApp);
+
+httpsServer.listen(443, () => console.log('listening for https requests on port 443'));
 
 // register view engine
-app.set('view engine', 'ejs');
+httpsApp.set('view engine', 'ejs');
 
 // middlewares
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
+httpsApp.use(express.static('public'));
+httpsApp.use(express.urlencoded({ extended: true }));
 
 // routes
-app.use('/', routes);
+httpsApp.use('/', routes);
 
 // 404 page
-app.use((req, res) => res.status(404).render('404', { title: '404' }));
+httpsApp.use((req, res) => res.status(404).render('404', { title: '404' }));
