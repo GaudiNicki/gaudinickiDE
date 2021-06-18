@@ -1,20 +1,7 @@
 const fs = require('fs');
-const http = require('http');
 const https = require('https');
 const express = require('express');
 const routes = require('./routes/routes');
-
-// http express app
-const httpApp = express();
-const httpServer = http.createServer(httpApp);
-
-// listen for http requests on port 80
-httpServer.listen(80, () => console.log('listening for http requests on port 80'));
-
-// redirect http to https
-httpApp.get('*', function(req, res) {  
-    res.redirect('https://' + req.headers.host + req.url);
-})
 
 // create https credentials
 const credentials = {
@@ -23,20 +10,35 @@ const credentials = {
 }
 
 // https express app
-const httpsApp = express();
-const httpsServer = https.createServer(credentials, httpsApp);
+const app = express();
+const httpsServer = https.createServer(credentials, app);
 
 httpsServer.listen(443, () => console.log('listening for https requests on port 443'));
 
+// enable reverse proxy support
+app.enable('trust proxy');
+
+// redirect http to https
+app.use((req, res, next) => {
+    if (req.secure) {
+            // request was via https, so do no special handling
+            next();
+    } 
+    else {
+            // request was via http, so redirect to https
+            res.redirect('https://' + req.headers.host + req.url);
+    }
+});
+
 // register view engine
-httpsApp.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 // middlewares
-httpsApp.use(express.static('public'));
-httpsApp.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 // routes
-httpsApp.use('/', routes);
+app.use('/', routes);
 
 // 404 page
-httpsApp.use((req, res) => res.status(404).render('404', { title: '404' }));
+app.use((req, res) => res.status(404).render('404', { title: '404' }));
