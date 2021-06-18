@@ -12,7 +12,7 @@ const httpServer = http.createServer(httpApp);
 httpServer.listen(80, () => console.log('listening for http requests on port 80'));
 
 // redirect http to https
-http.get('*', function(req, res) {  
+httpApp.get('*', function(req, res) {  
     res.redirect('https://' + req.headers.host + req.url);
 })
 
