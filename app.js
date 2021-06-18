@@ -8,7 +8,7 @@ const routes = require('./routes/routes');
 const httpApp = express();
 const httpServer = http.createServer(httpApp);
 
-httpsServer.listen(80, () => console.log('listening for http requests on port 80'));
+httpServer.listen(80, () => console.log('listening for http requests on port 80'));
 
 // redirect all http requests to https
 httpApp.get('*', (req, res) => res.redirect('https:' + req.headers.host + req.url));
