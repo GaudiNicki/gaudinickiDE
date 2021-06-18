@@ -1,4 +1,9 @@
 @media only screen {
+    .home {
+        background: url("/img/background.jpg") no-repeat fixed;
+        background-size: cover;
+    }
+
     .home .content-wrapper {
         height: 100vh;
         position: relative;
