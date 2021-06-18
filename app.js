@@ -21,6 +21,7 @@ app.enable('trust proxy');
 // redirect http to https
 app.use((req, res, next) => {
     console.log(req.headers.host);
+    console.log(req.url);
     req.secure ? next() : res.redirect('https://' + req.headers.host + req.url);
 });
 
