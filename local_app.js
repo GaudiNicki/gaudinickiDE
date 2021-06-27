@@ -3,7 +3,6 @@ const http = require('http');
 const https = require('https');
 const express = require('express');
 const routes = require('./routes/routes');
-const updatedRoutes = require('./routes/routes_updated');
 
 // create http server listening on port 80
 const httpApp = express();
@@ -35,9 +34,6 @@ app.set('view engine', 'ejs');
 // middlewares
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
-
-// updated design
-app.use('/updated/', updatedRoutes);
 
 // current design
 app.use('/', routes);
