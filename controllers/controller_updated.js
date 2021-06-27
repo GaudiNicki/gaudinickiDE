@@ -1,40 +1,40 @@
 const index = (req, res) => {
-    res.render('current/index', { 
+    res.render('updated/index', { 
         title: 'Home',
         styleFile: 'indexStyles.css'
     });
 };
 
 const me = (req, res) => {
-    res.render('current/me', { 
+    res.render('updated/me', { 
         title: 'Me',
         styleFile: 'meStyles.css' 
     });
 };
 
 const coding = (req, res) => {
-    res.render('current/coding', { 
+    res.render('updated/coding', { 
         title: 'Coding',
         styleFile: 'codingStyles.css' 
     });
 };
 
 const youtube = (req, res) => {
-    res.render('current/youtube', { 
+    res.render('updated/youtube', { 
         title: 'YouTube',
         styleFile: 'youtubeStyles.css' 
     });
 };
 
 const imprint = (req, res) => {
-    res.render('current/imprint', { 
+    res.render('updated/imprint', { 
         title: 'Impressum',
         styleFile: 'imprintStyles.css' 
     });
 };
 
 const privacy = (req, res) => {
-    res.render('current/privacy', { 
+    res.render('updated/privacy', { 
         title: 'Datenschutz',
         styleFile: 'privacyStyles.css' 
     });
