@@ -1,0 +1,11 @@
+$primary: red;
+$secondary: blue;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+#home {
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 56px);
+}
