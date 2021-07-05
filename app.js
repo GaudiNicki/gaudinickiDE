@@ -4,39 +4,43 @@ const https = require('https');
 const express = require('express');
 const routes = require('./routes/routes');
 
-// create http server listening on port 80
+// ports
+const httpPort = 8080;
+const httpsPort = 8443;
+
+// create http server
 const httpApp = express();
 const httpServer = http.createServer(httpApp);
 
-httpServer.listen(80, () => console.log('listening for http requests on port 80'));
+httpServer.listen(httpPort, () => console.log('listening for http requests on port', httpPort));
 
 // redirect all http requests to https
-httpApp.get('*', (req, res) => res.redirect('https:' + req.headers.host + req.url));
+//httpApp.get('*', (req, res) => res.redirect('https:' + req.headers.host + req.url));
 
 // create https credentials
-const credentials = {
-    key: fs.readFileSync('/etc/letsencrypt/live/gaudinicki.de/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/gaudinicki.de/fullchain.pem')
-}
+//const credentials = {
+//    key: fs.readFileSync('/etc/letsencrypt/live/gaudinicki.de/privkey.pem'),
+//    cert: fs.readFileSync('/etc/letsencrypt/live/gaudinicki.de/fullchain.pem')
+//}
 
-// create httpsServer listening on port 443
-const app = express();
-const httpsServer = https.createServer(credentials, app);
+// create httpsServer
+//const app = express();
+//const httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(443, () => console.log('listening for https requests on port 443'));
+//httpsServer.listen(httpsPort, () => console.log('listening for https requests on port', httpsPort));
 
 // enable reverse proxy support
-app.enable('trust proxy');
+//app.enable('trust proxy');
 
 // register view engine
-app.set('view engine', 'ejs');
+httpApp.set('view engine', 'ejs');
 
 // middlewares
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
+httpApp.use(express.static('public'));
+httpApp.use(express.urlencoded({ extended: true }));
 
 // routes
-app.use('/', routes);
+httpApp.use('/', routes);
 
 // 404 page
-app.use((req, res) => res.status(404).render('404', { title: '404' }));
+httpApp.use((req, res) => res.status(404).render('404', { title: '404' }));
