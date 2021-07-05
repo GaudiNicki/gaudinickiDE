@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass --watch public/scss/styles.scss public/css/styles.css",
+    "start": "node app"
   },
   "author": "",
   "license": "ISC",
