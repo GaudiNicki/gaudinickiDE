@@ -32,7 +32,7 @@ $white: #FFFFFF;
             background-size: cover;
 
             .overlay {
-                background-color: rgba(0,0,0,0.5);
+                background-color: rgba(0,0,0,0.3);
                 z-index: 1;
 
                 .introduction {
@@ -64,7 +64,7 @@ $white: #FFFFFF;
                     content: '';
                     position: absolute;
                     width: 2px;
-                    background: $primary;
+                    background: $secondary;
                     top: 0;
                     bottom: 0;
                     left: 90px;
@@ -86,7 +86,7 @@ $white: #FFFFFF;
                     top: calc(50% - 8px);
                     right: -8px;
                     background: #ffffff;
-                    border: 2px solid $primary;
+                    border: 2px solid $secondary;
                     border-radius: 16px;
                     z-index: 1;
                 }
@@ -98,7 +98,7 @@ $white: #FFFFFF;
                     height: 2px;
                     top: calc(50% - 1px);
                     right: 8px;
-                    background: $primary;
+                    background: $secondary;
                     z-index: 1;
                 }
 
@@ -109,7 +109,7 @@ $white: #FFFFFF;
                     text-align: center;
                     font-size: 14px;
                     font-weight: bold;
-                    color: $primary;
+                    color: $secondary;
                     text-transform: uppercase;
                     letter-spacing: 1px;
                     z-index: 1;
@@ -123,11 +123,11 @@ $white: #FFFFFF;
                     padding: 9px 0;
                     top: calc(50% - 20px);
                     background: $light;
-                    border: 2px solid $primary;
+                    border: 2px solid $secondary;
                     border-radius: 40px;
                     text-align: center;
                     font-size: 18px;
-                    color: $primary;
+                    color: $secondary;
                     z-index: 1;
                 }
 
@@ -135,13 +135,13 @@ $white: #FFFFFF;
                     padding: 30px 90px 30px 30px;
                     background: $light;
                     position: relative;
-                    border-radius: 0 500px 500px 0;
+                    border-radius: 100px 0 0 100px;
                     
                     h2 {
                         margin: 0 0 10px 0;
                         font-size: 18px;
                         font-weight: normal;
-                        color: $primary;
+                        color: $secondary;
                     }
                     
                     p {
@@ -167,7 +167,7 @@ $white: #FFFFFF;
                 
                 .date {
                     right: auto;
-                    left: 15px;
+                    left: 0;
                 }
                 
                 .icon {
@@ -177,7 +177,6 @@ $white: #FFFFFF;
 
                 .content {
                     padding: 30px 30px 30px 90px;
-                    border-radius: 500px 0 0 500px;
                 }
             }
 
@@ -195,7 +194,7 @@ $white: #FFFFFF;
                 
                 .date {
                     right: auto;
-                    left: 15px;
+                    left: 0;
                 }
                 
                 .icon {
@@ -205,7 +204,6 @@ $white: #FFFFFF;
                 
                 .content {
                     padding: 30px 30px 30px 90px;
-                    border-radius: 500px 0 0 500px;
                 }
             }
         }
@@ -243,11 +241,15 @@ $white: #FFFFFF;
                 }
 
                 .date {
-                    left: -75px;
+                    left: -100px;
                 }
 
                 .icon {
                     left: 56px;
+                }
+                .content {
+                    border-radius: 500px 0 0 500px;
+                    padding: 30px 30px 30px 90px;
                 }
             }
 
@@ -264,7 +266,7 @@ $white: #FFFFFF;
                 }
 
                 .date {
-                    right: -75px;
+                    right: -100px;
                     left: auto;
                 }
 

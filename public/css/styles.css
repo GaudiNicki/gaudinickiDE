@@ -22,7 +22,7 @@
     background-size: cover;
   }
   body #home .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
   }
   body #home .overlay .introduction {
@@ -46,7 +46,7 @@
     content: "";
     position: absolute;
     width: 2px;
-    background: red;
+    background: blue;
     top: 0;
     bottom: 0;
     left: 90px;
@@ -66,7 +66,7 @@
     top: calc(50% - 8px);
     right: -8px;
     background: #ffffff;
-    border: 2px solid red;
+    border: 2px solid blue;
     border-radius: 16px;
     z-index: 1;
   }
@@ -77,7 +77,7 @@
     height: 2px;
     top: calc(50% - 1px);
     right: 8px;
-    background: red;
+    background: blue;
     z-index: 1;
   }
   body #about .event .date {
@@ -87,7 +87,7 @@
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    color: red;
+    color: blue;
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 1;
@@ -100,24 +100,24 @@
     padding: 9px 0;
     top: calc(50% - 20px);
     background: #F8F8F8;
-    border: 2px solid red;
+    border: 2px solid blue;
     border-radius: 40px;
     text-align: center;
     font-size: 18px;
-    color: red;
+    color: blue;
     z-index: 1;
   }
   body #about .event .content {
     padding: 30px 90px 30px 30px;
     background: #F8F8F8;
     position: relative;
-    border-radius: 0 500px 500px 0;
+    border-radius: 100px 0 0 100px;
   }
   body #about .event .content h2, body #about .event .content .h2 {
     margin: 0 0 10px 0;
     font-size: 18px;
     font-weight: normal;
-    color: red;
+    color: blue;
   }
   body #about .event .content p {
     margin: 0;
@@ -137,7 +137,7 @@
   }
   body #about .event.left .date {
     right: auto;
-    left: 15px;
+    left: 0;
   }
   body #about .event.left .icon {
     right: auto;
@@ -145,7 +145,6 @@
   }
   body #about .event.left .content {
     padding: 30px 30px 30px 90px;
-    border-radius: 500px 0 0 500px;
   }
   body #about .event.right {
     left: 0%;
@@ -159,7 +158,7 @@
   }
   body #about .event.right .date {
     right: auto;
-    left: 15px;
+    left: 0;
   }
   body #about .event.right .icon {
     right: auto;
@@ -167,7 +166,6 @@
   }
   body #about .event.right .content {
     padding: 30px 30px 30px 90px;
-    border-radius: 500px 0 0 500px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -192,10 +190,14 @@
     border-color: rgba(0, 0, 0, 0);
   }
   body #about .event.right .date {
-    left: -75px;
+    left: -100px;
   }
   body #about .event.right .icon {
     left: 56px;
+  }
+  body #about .event.right .content {
+    border-radius: 500px 0 0 500px;
+    padding: 30px 30px 30px 90px;
   }
   body #about .event.left::after {
     right: -8px;
@@ -207,7 +209,7 @@
     border-color: rgba(0, 0, 0, 0);
   }
   body #about .event.left .date {
-    right: -75px;
+    right: -100px;
     left: auto;
   }
   body #about .event.left .icon {
