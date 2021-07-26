@@ -1,0 +1,9 @@
+<li>
+    <div class="progressbar-title">
+        <h3><%= skill.name %></h3>
+        <span class="percent" id="<%= skill.name %>-percent"><%= skill.level %>%</span>
+    </div>
+    <div class="bar-container" data-percent="<%= skill.level %>">
+        <span class="progressbar" id="progress-<%= skill.name %>" style="width: <%= skill.level + '%' %>;"></span>
+    </div>
+</li>

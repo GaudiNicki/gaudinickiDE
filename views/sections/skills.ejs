@@ -1,3 +1,39 @@
-<section id="skills">
-    
-</section>
+<section id="skills" class="bg-light">
+    <div class="container-lg">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-10 col-xl-8">
+          <div class="text-center">
+            <h2>My Skillset</h2>
+            <p class="lead">You are probably interested in which programming languages, technologies and frameworks I have worked with in the last couple of years, right? Let's find out...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-around">
+          <div class="col-sm-12 col-lg-6 col-xl-5">
+              <div class="content">
+                  <div class="skills-wrapper">
+                    <h2 class="title display-5 my-5">Programming Languages</h2>
+                    <ul class="skills-bar-container language-skills">
+                      <% skills.programmingLanguages.forEach(skill => { %>
+                        <%- include('../partials/skill.ejs', {skill: skill}); %> 
+                      <% }); %> 
+                    </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-12 col-lg-6 col-xl-5">
+            <div class="content">
+                <div class="skills-wrapper">
+                  <h2 class="title display-5 my-5">Technologies and Frameworks</h2>
+                  <ul class="skills-bar-container framework-skills">
+                    <% skills.technologiesAndFrameworks.forEach(skill => { %>
+                      <%- include('../partials/skill.ejs', {skill: skill}); %> 
+                    <% }); %> 
+                  </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
