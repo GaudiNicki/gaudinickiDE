@@ -212,6 +212,63 @@
   body #skills .content .skills-wrapper .framework-skills .progressbar {
     background: blue;
   }
+  body #footer {
+    background: #363B3F;
+    padding: 0 0 20px 0;
+  }
+  body #footer p {
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 20px;
+  }
+  body #footer p a {
+    color: lightblue;
+  }
+  body #footer p a:hover {
+    text-decoration: underline;
+  }
+  body #footer .social {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 0px;
+  }
+  body #footer .social li {
+    display: inline-block;
+    margin: 4px;
+  }
+  body #footer .social li a {
+    display: block;
+    text-decoration: none;
+    border-bottom: medium none;
+    padding: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in 0s, all 1s ease 0s;
+    background: #444749;
+    color: white;
+  }
+  body #footer .social li .mail:hover {
+    background-color: #FBBC05;
+  }
+  body #footer .social li .twitter:hover {
+    background-color: #00A9F1;
+  }
+  body #footer .social li .linkedin:hover {
+    background-color: #006DB3;
+  }
+  body #footer .social li .xing:hover {
+    background-color: #026466;
+  }
+  body #footer .social li .instagram:hover {
+    background-color: #E1306C;
+  }
+  body #footer .social li .youtube:hover {
+    background-color: #FF3333;
+  }
+  body #footer .social li .github:hover {
+    background-color: #2F2F2F;
+  }
 }
 @media only screen and (min-width: 768px) {
   body #home {

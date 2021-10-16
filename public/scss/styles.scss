@@ -271,7 +271,82 @@ $white: #FFFFFF;
                     }
                 }
             }
-        } 
+        }
+        
+        #portfolio {
+           
+        }
+
+        #footer {
+            background: #363B3F;
+            padding: 0 0 20px 0;
+
+            p {
+                font-size: 14px;
+                color: #FFFFFF;
+                text-align: center;
+                padding-top: 20px;
+
+                a {
+                    color: lightblue;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .social {
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+                padding-left: 0px;
+
+                li {
+                    display: inline-block;
+                    margin: 4px;
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        border-bottom: medium none;
+                        padding: 10px;
+                        border-radius: 3px;
+                        transition: all 0.3s ease-in 0s, all 1s ease 0s;
+                        background: #444749;
+                        color: white;
+                    }
+
+                    .mail:hover {
+                        background-color: #FBBC05;
+                    }
+
+                    .twitter:hover {
+                        background-color:#00A9F1;
+                    }
+
+                    .linkedin:hover {
+                        background-color:#006DB3;
+                    }
+
+                    .xing:hover {
+                        background-color: #026466;
+                    }
+
+                    .instagram:hover {
+                        background-color:#E1306C;
+                     }
+
+                    .youtube:hover {
+                        background-color:#FF3333;
+                    }
+                    
+                    .github:hover {
+                        background-color:#2F2F2F;
+                    }
+                }
+            }
+        }
     }
 }
 

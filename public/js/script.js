@@ -1,4 +1,7 @@
+const { response } = require("express");
+
 $(function() {
+	// skills animation
 	const skillsWrapper = $('.skills-wrapper');
 	let skillsAreVisible = false;
 
@@ -31,4 +34,5 @@ $(function() {
 			skillsAreVisible = true;
 		}
 	});
+	// skills animation end
 });
