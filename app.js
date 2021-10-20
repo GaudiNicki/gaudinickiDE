@@ -5,8 +5,8 @@ const express = require('express');
 const routes = require('./routes/routes');
 
 // ports
-const httpPort = 8080;
-const httpsPort = 8443;
+const httpPort = 80;
+const httpsPort = 443;
 
 // create http server
 const httpApp = express();
