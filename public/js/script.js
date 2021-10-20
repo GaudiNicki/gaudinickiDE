@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 $(function() {
 	// skills animation
 	const skillsWrapper = $('.skills-wrapper');

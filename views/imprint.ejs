@@ -1,1 +1,30 @@
-<h1>Imprint</h1>
+<html lang="de">
+<%- include("partials/head.ejs")%>
+<body>
+    <!-- navbar -->
+    <%- include("sections/navbar.ejs") %>
+
+    <section class="imprint">
+        <div class="container-lg">
+            <h1>Imprint</h1>
+
+            <h2>Information according to &sect; 5 TMG</h2>
+            <p>Niklas Witzel<br />
+            Benzstraße, 8<br />
+            22177 Hamburg</p>
+
+            <h2>Contact</h2>
+            <p>Telephone: 0174 / 9158167<br />
+            E-Mail: witzel.niklas@gmx.de</p>
+        </div>
+    </section>
+
+    <div class="fixed-to-bottom">
+        <!-- Footer -->
+        <%- include("sections/footer.ejs") %>
+    </div>
+
+    <!-- JS Imports -->
+    <%- include("partials/jsScripts.ejs") %>
+</body>
+</html>

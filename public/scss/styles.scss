@@ -25,6 +25,13 @@ $white: #FFFFFF;
             list-style-type: none;
         }
 
+        .fixed-to-bottom {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
         #home {
             padding: 0;
             background-image: url('../img/background.jpg');
@@ -274,7 +281,47 @@ $white: #FFFFFF;
         }
         
         #portfolio {
-           
+            #portfolio-slider {
+                .carousel-item {
+                    .carousel-caption {
+                        z-index: 2;
+
+                        h5 {
+                            color: $black;
+                            font-size: 24px;
+                        }
+
+                        p {
+                            font-size: 18px;
+                        }
+    
+                        .technologies {
+                            display: none;
+                            margin-bottom: 24px;
+            
+                            .technology {
+                                padding: 5px 10px;
+                                background: $secondary;
+                                color: white;
+                                border-radius: 10px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                .carousel-item:after {
+                    z-index: 1;
+                    content:"";
+                    display: block;
+                    position:absolute;
+                    top:0;
+                    bottom:0;
+                    left:0;
+                    right:0;
+                    background:rgba(255,255,255,0.5);
+                }
+            } 
         }
 
         #footer {
@@ -345,6 +392,29 @@ $white: #FFFFFF;
                         background-color:#2F2F2F;
                     }
                 }
+            }
+        }
+
+        #privacy {
+            h1 {
+                color: $primary;
+            }
+
+            h2 {
+                color: $secondary;
+                margin-top: 24px;
+            }
+
+            h3 {
+                margin-top: 20px;
+            }
+
+            h4 {
+                margin-top: 16px;
+            }
+
+            ol, ul {
+                list-style-type: square;
             }
         }
     }
@@ -418,6 +488,27 @@ $white: #FFFFFF;
                 .content {
                     border-radius: 0 500px 500px 0;
                     padding: 30px 90px 30px 30px;
+                }
+            }
+        }
+
+        #portfolio {
+            #portfolio-slider {
+                .carousel-item {
+                    .carousel-caption {
+                        h5 {
+                            font-size: 32px;
+                        }
+
+                        p {
+                            font-size: 1.25rem;
+                        }
+
+
+                        .technologies {
+                            display: block;
+                        }
+                    }
                 }
             }
         }

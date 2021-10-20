@@ -15,6 +15,12 @@
   body ol, body ul {
     list-style-type: none;
   }
+  body .fixed-to-bottom {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
   body #home {
     padding: 0;
     background-image: url("../img/background.jpg");
@@ -212,6 +218,38 @@
   body #skills .content .skills-wrapper .framework-skills .progressbar {
     background: blue;
   }
+  body #portfolio #portfolio-slider .carousel-item .carousel-caption {
+    z-index: 2;
+  }
+  body #portfolio #portfolio-slider .carousel-item .carousel-caption h5, body #portfolio #portfolio-slider .carousel-item .carousel-caption .h5 {
+    color: #000000;
+    font-size: 24px;
+  }
+  body #portfolio #portfolio-slider .carousel-item .carousel-caption p {
+    font-size: 18px;
+  }
+  body #portfolio #portfolio-slider .carousel-item .carousel-caption .technologies {
+    display: none;
+    margin-bottom: 24px;
+  }
+  body #portfolio #portfolio-slider .carousel-item .carousel-caption .technologies .technology {
+    padding: 5px 10px;
+    background: blue;
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  body #portfolio #portfolio-slider .carousel-item:after {
+    z-index: 1;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.5);
+  }
   body #footer {
     background: #363B3F;
     padding: 0 0 20px 0;
@@ -269,6 +307,22 @@
   body #footer .social li .github:hover {
     background-color: #2F2F2F;
   }
+  body #privacy h1, body #privacy .h1 {
+    color: red;
+  }
+  body #privacy h2, body #privacy .h2 {
+    color: blue;
+    margin-top: 24px;
+  }
+  body #privacy h3, body #privacy .h3 {
+    margin-top: 20px;
+  }
+  body #privacy h4, body #privacy .h4 {
+    margin-top: 16px;
+  }
+  body #privacy ol, body #privacy ul {
+    list-style-type: square;
+  }
 }
 @media only screen and (min-width: 768px) {
   body #home {
@@ -321,6 +375,15 @@
   body #about .event.left .content {
     border-radius: 0 500px 500px 0;
     padding: 30px 90px 30px 30px;
+  }
+  body #portfolio #portfolio-slider .carousel-item .carousel-caption h5, body #portfolio #portfolio-slider .carousel-item .carousel-caption .h5 {
+    font-size: 32px;
+  }
+  body #portfolio #portfolio-slider .carousel-item .carousel-caption p {
+    font-size: 1.25rem;
+  }
+  body #portfolio #portfolio-slider .carousel-item .carousel-caption .technologies {
+    display: block;
   }
 }
 @media only screen and (min-width: 992px) {

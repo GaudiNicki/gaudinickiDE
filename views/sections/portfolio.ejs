@@ -8,11 +8,14 @@
               </div>
             </div>
 
-            <div class="col-sm-12 col-lg-">
-                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="col-sm-12 col-lg-10">
+                <div id="portfolio-slider" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <% for(var i=0; i<projects.length; i++) { %>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="<%= i %>" <% if(i == 0) { %><%= 'class="active"' %> <% } %> aria-current="true" aria-label="<%= projects[i].name %>"></button> 
+                            <button type="button" data-bs-target="#portfolio-slider" aria-current="true" data-bs-slide-to="<%= i %>" aria-label="<%= projects[i].name %>" 
+                                <% if(i == 0) {%> 
+                                    class="active"
+                                <% } %>></button> 
                         <% } %>
                     </div>
                     <div class="carousel-inner">
@@ -22,20 +25,27 @@
                             <% } else { %>
                                 <div class="carousel-item" data-bs-interval="10000">
                             <% } %>
-                                <img src="<%= projects[i].imgUrl %>" class="d-block w-100" alt="<%= projects[i].name %>">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5><%= projects[i].name %></h5>
-                                    <p><%= projects[i].description %></p>
-                                    <a href="<%= projects[i].githubLink %>">Visit</a>
-                                </div>
+                                <a href="<%= projects[i].githubLink %>">
+                                    <img src="<%= projects[i].imgUrl %>" class="d-block w-100" alt="<%= projects[i].name %>">
+                                    <div class="carousel-caption d-block">
+                                        <h5><%= projects[i].name %></h5>
+                                        <p class="lead"><%= projects[i].description %></p>
+                                        
+                                        <div class="technologies">
+                                            <% projects[i].technologies.forEach(technology => { %>
+                                               <span class="technology"><%= technology %></span> 
+                                            <%});%>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         <% } %>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#portfolio-slider" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#portfolio-slider" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
