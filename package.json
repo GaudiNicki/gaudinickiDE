@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev-start": "concurrently --kill-others \"npm run build\" \"npm run start\"",
+    "dev-start": "concurrently --kill-others \"npm run build\" \"nodemon local_app\"",
     "start": "nodemon app",
     "build": "sass --watch public/scss/styles.scss public/css/styles.css"
   },

@@ -25,7 +25,7 @@
                             <% } else { %>
                                 <div class="carousel-item" data-bs-interval="10000">
                             <% } %>
-                                <a href="<%= projects[i].githubLink %>">
+                                <% if(projects[i].githubLink) { %><a href="<%= projects[i].githubLink %>"><% } %>
                                     <img src="<%= projects[i].imgUrl %>" class="d-block w-100" alt="<%= projects[i].name %>">
                                     <div class="carousel-caption d-block">
                                         <h5><%= projects[i].name %></h5>
@@ -37,7 +37,7 @@
                                             <%});%>
                                         </div>
                                     </div>
-                                </a>
+                                <% if(projects[i].githubLink) { %></a><% } %>
                             </div>
                         <% } %>
                     </div>
